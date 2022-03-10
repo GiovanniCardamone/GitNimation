@@ -7,6 +7,9 @@
   "eslintConfig": {
     "extends": "@giovannicardamone/eslint-config"
   },
+  "jest": {
+    "clearMocks": true
+  },
   "scripts": {
     "prepare": "husky install",
     "lint": "eslint --fix '**/*.ts",
@@ -14,7 +17,8 @@
     "test": "jest",
     "cover": "nyc npm run test",
     "build": "tsc && tsc-alias",
-    "run": "node dist",
+    "start": "node dist",
+    "run": "npm run build && npm start",
     "dev": "ts-node-dev --respawn -r tsconfig-paths/register src"
   },
   "repository": {
