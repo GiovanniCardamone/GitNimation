@@ -21,6 +21,8 @@
     "run": "npm run build && npm start",
     "dev": "ts-node-dev --respawn -r tsconfig-paths/register src"
   },
+  "bin": "dist/index.js",
+  "man": "man/doc.1",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/GiovanniCardamone/GitNimation.git"
